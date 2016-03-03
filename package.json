@@ -1,0 +1,35 @@
+{
+  "name": "rutgers-virtual-flyer",
+  "version": "1.0.0",
+  "description": "relp app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriscampbell32/rutgers-virtual-flyer.git"
+  },
+  "keywords": [
+    "rutgers"
+  ],
+  "author": "chris campbell, carolyn tevnan, servio mora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriscampbell32/rutgers-virtual-flyer/issues"
+  },
+  "homepage": "https://github.com/chriscampbell32/rutgers-virtual-flyer#readme",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "mysql": "^2.10.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sequelize": "^3.19.3",
+    "nodemon": "~1.9.1"
+  }
+}

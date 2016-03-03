@@ -1,0 +1,39 @@
+body {
+  margin-top: 75px;
+  background-color: #EDF0F5;
+  color: black;
+}
+
+form {
+  width: 80%;
+}
+
+#home-left h1 h2 h4 h5 {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #CC0033;
+}
+
+.navbar .navbar-brand {
+  color: #000;
+}
+
+.navbar input {
+  padding: 0px 5px;
+}
+
+#login-btn {
+  padding-left: 6px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  height: 3px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+
