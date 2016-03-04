@@ -18,14 +18,13 @@ if(process.env.NODE_ENV === 'production') {
   var connection = new Sequelize('rutgersflyers_db', 'root');
 }
 
+//bodyParser
+app.use(bodyParser.urlencoded({extended: false}));
 
 
 //routes
 var routes = require('./routes/index');
 app.use('/', routes);
-
-//bodyParser
-app.use(bodyParser.urlencoded({extended: false}));
 
 //set up handlebars layout
 app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
@@ -37,6 +36,7 @@ app.use('/public', express.static(__dirname + "/public"));
 //passport
 var passport = require('passport');
 var passportLocal = require('passport-local');
+
 
 //middleware
 app.use(require('express-session')({

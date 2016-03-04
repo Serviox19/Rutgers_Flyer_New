@@ -4,6 +4,9 @@ var Sequelize = require('sequelize');
 var connection = new Sequelize('rutgersflyers_db', 'root');
 var User = require('../models/user.js');
 
+//passport
+//seriaize
+//deserialize
 
 router.get('/', function(req, res) {
   res.render('home', {title: 'Welcome to Rutgers Flyer'});
@@ -20,13 +23,13 @@ router.post('/save', function(req, res) {
 
 
 router.post('/login', function(req, res) {
-  var email = req.body.email;
-  var password = req.body.password;
+  console.log(req.body);
+  var email = req.body.login-email;
+  var password = req.body.login-password;
 
   User.findOne({
     where: {
-      email: email,
-      password: password
+      email: email
     }
   }).then(function(user){
     if(user){
@@ -40,16 +43,20 @@ router.post('/login', function(req, res) {
   });
 });
 
-router.get('/dashboard', function(req,res) {
-
+router.get('/dashboard', function(req, res) {
   // if user is authenticated
   if(req.session.authenticated){
-    res.render('dashboard', { title: 'Dashboard', layout: 'dashboard'});
+    res.render('dashboard', { title: 'Dashboard', layout: 'dashboard-layout'});
   } else {
     res.redirect("/?msg=you are not logged in");
   }
+
+  res.render('dashboard', { title: 'Dashboard', layout: 'dashboard-layout'});
 });
 
+router.get('/restaurants', function(req, res) {
+  res.render('restaurants', { title: 'Restaurants Page', layout: 'dashboard-layout'})
+});
 
 
 
